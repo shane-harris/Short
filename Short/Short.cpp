@@ -7,7 +7,7 @@ Feb 10, 2016
 
 #include <iostream>
 #include "Short.h"
-
+using namespace std;
 void Short::_display_BIN() const
 {
     int x=_n;

@@ -9,9 +9,16 @@
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.cdt.core.pathentry">
+		<pathentry include="C:/mingw/include" kind="inc" path="" system="true"/>
+		<pathentry include="C:/mingw/lib/gcc/mingw32/6.3.0/include" kind="inc" path="" system="true"/>
+		<pathentry include="C:/mingw/lib/gcc/mingw32/6.3.0/include/c++" kind="inc" path="" system="true"/>
+		<pathentry include="C:/mingw/lib/gcc/mingw32/6.3.0/include/c++/backward" kind="inc" path="" system="true"/>
+		<pathentry include="C:/mingw/lib/gcc/mingw32/6.3.0/include/c++/mingw32" kind="inc" path="" system="true"/>
+		<pathentry include="C:/mingw/lib/gcc/mingw32/6.3.0/include-fixed" kind="inc" path="" system="true"/>
+		<pathentry include="C:/mingw/mingw32/include" kind="inc" path="" system="true"/>
 		<pathentry kind="src" path=""/>
 		<pathentry kind="out" path="build"/>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 </cproject>

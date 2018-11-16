@@ -1,25 +1,21 @@
-PROJECT_ROOT = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+# This Target will compile ShortMain.cpp
 
-OBJS = ShortMain.o Short.o
+#Shane Harris
+#CISP 400 - Mon Wed 3:00 pm
+#Project 2
+#Feb 17, 2016
 
-ifeq ($(BUILD_MODE),debug)
-	CFLAGS += -g
-else ifeq ($(BUILD_MODE),run)
-	CFLAGS += -O2
-else
-	$(error Build mode $(BUILD_MODE) not supported by this Makefile)
-endif
+CPL=g++ -pedantic
 
 all:	main
 
-main:	$(OBJS)
-	$(CXX) -o $@ $^
+main:	ShortMain.o Short.o
+	$(CPL) -Wall ShortMain.o Short.o -o main
 
-%.o:	$(PROJECT_ROOT)%.cpp
-	$(CXX) -c $(CFLAGS) $(CXXFLAGS) $(CPPFLAGS) -o $@ $<
+ShortMain.o:	ShortMain.cpp Short.o
+	$(CPL) -c -Wall ShortMain.cpp
 
-%.o:	$(PROJECT_ROOT)%.c
-	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+Short.o:	Short.cpp
 
-clean:
-	rm -fr main $(OBJS)
+clear:
+	rm -rf *o main
